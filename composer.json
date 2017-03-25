@@ -1,0 +1,56 @@
+{
+    "name": "nonoesp/commonmark-extensions",
+    "type": "library",
+    "description": "Useful extensions for customizing the league/commonmark parser",
+    "keywords": ["markdown", "commonmark", "extensions", "extras"],
+    "homepage": "https://github.com/nonoesp/commonmark-extensions",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Nono Martínez Alonso",
+            "email": "mail aatt nono ddott ma",
+            "homepage": "http://www.nono.ma",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.8",
+        "league/commonmark": "^0.13|^0.14|^0.15"
+    },
+    "require-dev": {
+        "jgm/SmartPunct": "0.26",
+        "phpunit/phpunit" : "~4.3|~5.0",
+        "scrutinizer/ocular": "~1.1"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "jgm/SmartPunct",
+                "version": "0.26",
+                "dist": {
+                    "url": "https://raw.githubusercontent.com/jgm/commonmark.js/0.26.0/test/smart_punct.txt",
+                    "type": "file"
+                }
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "League\\CommonMark\\Extras\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "nonoesp\\CommonMark\\Extras\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2-dev"
+        }
+    }
+}
